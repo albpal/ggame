@@ -2,9 +2,11 @@ package com.albpal.ggame.assets;
 
 import com.albpal.ggame.core.*;
 
-public class EarthSoldier extends Asset
+public class AssetImpl extends Asset
 {
-  EarthSoldier(String urlPackage, String version)
+  AssetImpl() { }
+
+  public AssetImpl(String urlPackage, String version)
   {
     super(urlPackage, version);
   }

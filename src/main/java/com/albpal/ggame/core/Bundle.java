@@ -1,10 +1,16 @@
 package com.albpal.ggame.core;
 
 import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+import com.albpal.ggame.bundles.*;
+
+@JsonDeserialize(as = BundleImpl.class)
 public abstract class Bundle
 {
-  List<Asset> assets;
+  protected List<Asset> assets;
+
+  public Bundle() { }
 
   public Bundle(List<Asset> a)
   {
@@ -19,4 +25,6 @@ public abstract class Bundle
   {
     return assets;
   }
+
+  public abstract String toString();
 }

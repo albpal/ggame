@@ -6,7 +6,7 @@
 	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-	<bean id="Version0001" class="com.albpal.ggame.versions.Version0001">
+	<bean id="Version0001" class="com.albpal.ggame.versions.AppVersionImpl" scope="prototype">
 		<constructor-arg type="java.lang.String" value="0001"/>
 		<constructor-arg ref="CardsBundleList0001"/>
 	</bean>
@@ -16,7 +16,7 @@
 			<ref bean="WaterCardsBundle0001" />
 	</util:list>
 
-	<bean id="EarthCardsBundle0001" class="com.albpal.ggame.bundles.EarthCardsBundle"  scope="prototype">
+	<bean id="EarthCardsBundle0001" class="com.albpal.ggame.bundles.BundleImpl"  scope="prototype">
 		<constructor-arg ref="EarthAssets0001"/>
 	</bean>
 
@@ -24,12 +24,12 @@
 	    <ref bean="EarthSoldier0001" />
 	</util:list>
 
-	<bean id="EarthSoldier0001" class="com.albpal.ggame.assets.EarthSoldier"  scope="prototype">
+	<bean id="EarthSoldier0001" class="com.albpal.ggame.assets.AssetImpl"  scope="prototype">
 		<constructor-arg type="java.lang.String" value="http://route_to_the_asset/EarthSoldier.zip"/>
 		<constructor-arg type="java.lang.String" value="v0001"/>
 	</bean>
 
-	<bean id="WaterCardsBundle0001" class="com.albpal.ggame.bundles.WaterCardsBundle"  scope="prototype">
+	<bean id="WaterCardsBundle0001" class="com.albpal.ggame.bundles.BundleImpl"  scope="prototype">
 		<constructor-arg ref="WaterAssets0001"/>
 	</bean>
 
@@ -37,7 +37,7 @@
 			<ref bean="WaterSoldier0001" />
 	</util:list>
 
-	<bean id="WaterSoldier0001" class="com.albpal.ggame.assets.WaterSoldier"  scope="prototype">
+	<bean id="WaterSoldier0001" class="com.albpal.ggame.assets.AssetImpl"  scope="prototype">
 		<constructor-arg type="java.lang.String" value="http://route_to_the_asset/WaterSoldier.zip"/>
 		<constructor-arg type="java.lang.String" value="v0001"/>
 	</bean>
