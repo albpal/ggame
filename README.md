@@ -20,7 +20,7 @@ Every App Version has an unique identifier and a list of bundles representing gr
 Every bundle has its own asset. Following the example of a card game, the assets are the cards.
 
 ### Operations
-Get the last version:
+Get the version configured as the default one:
 
 ```
 GET <URL>/ggame-0.1.0/version
