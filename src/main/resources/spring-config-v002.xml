@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<bean id="Version0002" class="com.albpal.ggame.versions.Version0002">
+		<constructor-arg type="java.lang.String" value="0002"/>
+		<constructor-arg ref="CardsBundleList0002"/>
+	</bean>
+
+	<util:list id="CardsBundleList0002" value-type="com.albpal.ggame.core.Bundle" scope="prototype">
+			<ref bean="EarthCardsBundle0002" />
+			<ref bean="WaterCardsBundle0002" />
+	</util:list>
+
+	<bean id="EarthCardsBundle0002" class="com.albpal.ggame.bundles.EarthCardsBundle" scope="prototype">
+		<constructor-arg ref="EarthAssets0002"/>
+	</bean>
+
+	<util:list id="EarthAssets0002" value-type="com.albpal.ggame.core.Asset" scope="prototype">
+	    <ref bean="EarthSoldier0002" />
+	</util:list>
+
+	<bean id="EarthSoldier0002" class="com.albpal.ggame.assets.EarthSoldier" scope="prototype">
+		<constructor-arg type="java.lang.String" value="http://route_to_the_asset/EarthSoldier.zip"/>
+		<constructor-arg type="java.lang.String" value="v0002"/>
+	</bean>
+
+	<bean id="WaterCardsBundle0002" class="com.albpal.ggame.bundles.WaterCardsBundle" scope="prototype">
+		<constructor-arg ref="WaterAssets0002"/>
+	</bean>
+
+	<util:list id="WaterAssets0002" value-type="com.albpal.ggame.core.Asset" scope="prototype">
+			<ref bean="WaterSoldier0002" />
+	</util:list>
+
+	<bean id="WaterSoldier0002" class="com.albpal.ggame.assets.WaterSoldier" scope="prototype">
+		<constructor-arg type="java.lang.String" value="http://route_to_the_asset/WaterSoldier.zip"/>
+		<constructor-arg type="java.lang.String" value="v0004"/>
+	</bean>
+</beans>
