@@ -37,7 +37,7 @@ public class VersionController
     @RequestMapping(value="/version", method=RequestMethod.PUT)
     public AppVersion putVersion(@RequestParam(value="id", required = true) String id, @RequestParam(value="password", required = true) String password, @RequestBody AppVersion newAppVersion) throws Exception
     {
-      if (! password.equals("XXX"))
+      if (! password.equals("#Gg4m3Rul3s!"))
       {
         throw new PutForbidden("Password incorrect in order to perform the PUT operation!");
       }
