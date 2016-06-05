@@ -82,4 +82,4 @@ Date:  Sat, 04 Jun 2016 18:09:36 GMT
 {"appId":"0001","bundles":[{"assets":[{"version":"v0002","package":"http://route_to_the_asset/EarthSoldier.zip"}]},{"assets":[{"version":"v0004","package":"http://route_to_the_asset/WaterSoldier.zip"}]}]}
 ```
 
-For the above to work you  have to change URL and the password parameter for POST operations.
+For the above to work you  have to change URL and the password parameter for PUT operations.
